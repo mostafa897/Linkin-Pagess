@@ -376,18 +376,22 @@
         }
 
         /* الشريط العلوي مع تأثير البلور */
-        header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(var(--blur));
-            -webkit-backdrop-filter: blur(var(--blur));
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 12px 0;
-            transition: var(--transition);
-            animation: slideInDown 0.8s ease-out;
-        }
+header {
+    height: 100px; /* تحدد ارتفاع ثابت للـ nav */
+    padding: 0 20px; /* مسافة جانبية للعناصر داخل الـ nav */
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* يحافظ على محاذاة العناصر عمودياً في الوسط */
+    justify-content: space-between; /* يفرق العناصر يمين ويسار */
+    transition: var(--transition);
+}
+
 
         .dark-mode header {
             background-color: rgba(30, 41, 59, 0.85);
@@ -1579,7 +1583,7 @@
                                 <span data-en="Completed" data-ar="مكتمل">Completed</span>
                             </div>
                         </div>
-                        <h3 class="portfolio-company" data-en="Digital Marketing Company" data-ar="شركة ديجيتال ماركتنج">Digital Marketing Company</h3>
+                        <h3 class="portfolio-company" data-en="Digital Marketing Company" data-ar="موقع السيرة الذاتية">CV website</h3>
                         <p class="portfolio-description" data-en="A professionally designed and simple personal resume website to showcase personal information, skills, experience, education, and key projects in an organized and attractive manner. The site is designed to provide a user-friendly experience with a clear and easy-to-read format, and elegantly reflects a professional identity." data-ar="موقع سيرة ذاتية شخصي بتصميم احترافي وبسيط لعرض المعلومات الشخصية، المهارات، الخبرات، التعليم، وأبرز المشاريع بشكل منظم وجذاب. تم تصميم الموقع ليوفر تجربة مريحة للمستخدم مع تنسيق واضح وسهل القراءة، ويعكس الهوية المهنية بشكل أنيق.">A professionally designed and simple personal resume website to showcase personal information, skills, experience, education, and key projects in an organized and attractive manner. The site is designed to provide a user-friendly experience with a clear and easy-to-read format, and elegantly reflects a professional identity.</p>
                         <div class="portfolio-details">
                             <span class="portfolio-link" data-en="View Project" data-ar="عرض المشروع">
@@ -1659,7 +1663,7 @@
                         </div>
                         <div>
                             <h4 data-en="Address" data-ar="العنوان">Address</h4>
-                            <p data-en="Riyadh, Saudi Arabia" data-ar="الرياض، المملكة العربية السعودية">alexandria, egypt</p>
+                            <p data-en="alexandria, egypt" data-ar="الاسكندريه , مصر">alexandria, egypt</p>
                         </div>
                     </div>
                     
