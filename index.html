@@ -185,200 +185,10 @@
             padding: 0 20px;
         }
 
-        /* الشعار مع الحركة - تحسين للموبايل */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .logo-icon {
-            width: 50px;
-            height: 50px;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .link-shape {
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            border-radius: 5px;
-            transition: all 0.4s ease;
-        }
-
-        .link-1 {
-            top: 0;
-            left: 0;
-            background: linear-gradient(135deg, #4f46e5, #6366f1);
-            animation: float1 3s ease-in-out infinite;
-        }
-
-        .link-2 {
-            top: 0;
-            right: 0;
-            background: linear-gradient(135deg, #06b6d4, #22d3ee);
-            animation: float2 3s ease-in-out infinite;
-        }
-
-        .link-3 {
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-            animation: float3 3s ease-in-out infinite;
-        }
-
-        .link-4 {
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(135deg, #4f46e5, #22d3ee);
-            animation: float4 3s ease-in-out infinite;
-        }
-
-        .connector {
-            position: absolute;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-            opacity: 0.5;
-        }
-
-        .conn-vertical {
-            width: 2px;
-            height: 16px;
-            top: 17px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .conn-horizontal {
-            width: 16px;
-            height: 2px;
-            top: 50%;
-            left: 17px;
-            transform: translateY(-50%);
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            white-space: nowrap;
-        }
-
-        @keyframes float1 {
-            0%,100% { transform: translate(0,0) rotate(0); }
-            50% { transform: translate(-2px,-2px) rotate(5deg); }
-        }
-
-        @keyframes float2 {
-            0%,100% { transform: translate(0,0) rotate(0); }
-            50% { transform: translate(2px,-2px) rotate(-5deg); }
-        }
-
-        @keyframes float3 {
-            0%,100% { transform: translate(0,0) rotate(0); }
-            50% { transform: translate(-2px,2px) rotate(-5deg); }
-        }
-
-        @keyframes float4 {
-            0%,100% { transform: translate(0,0) rotate(0); }
-            50% { transform: translate(2px,2px) rotate(5deg); }
-        }
-
-        /* أزرار التحكم */
-        .header-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* زر تبديل الوضع */
-        .theme-toggle {
-            width: 45px;
-            height: 24px;
-            background-color: var(--card-bg);
-            border-radius: 50px;
-            position: relative;
-            cursor: pointer;
-            border: 2px solid var(--gray);
-            transition: var(--transition);
-            animation: slideInRight 0.8s ease-out;
-            flex-shrink: 0;
-        }
-
-        .theme-toggle::after {
-            content: '';
-            position: absolute;
-            width: 18px;
-            height: 18px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            top: 1px;
-            left: 1px;
-            transition: var(--transition);
-        }
-
-        .dark-mode .theme-toggle::after {
-            transform: translateX(21px);
-        }
-
-        .theme-toggle i {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 11px;
-            color: var(--gray);
-        }
-
-        .theme-toggle .fa-sun {
-            left: 5px;
-        }
-
-        .theme-toggle .fa-moon {
-            right: 5px;
-        }
-
-        /* زر الترجمة */
-        .language-switch {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
-            animation: slideInRight 0.8s ease-out 0.2s backwards;
-            font-size: 14px;
-            flex-shrink: 0;
-        }
-
-        .language-switch:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
-        }
-
-        .language-switch i {
-            font-size: 12px;
-        }
-
-        /* الشريط العلوي مع تأثير البلور */
+/* الشريط العلوي مع تأثير البلور */
 header {
-    height: 100px; /* تحدد ارتفاع ثابت للـ nav */
-    padding: 0 20px; /* مسافة جانبية للعناصر داخل الـ nav */
+    height: 100px; /* ارتفاع أكبر للـ nav */
+    padding: 0 20px; /* مسافة جانبية للعناصر */
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(var(--blur));
     -webkit-backdrop-filter: blur(var(--blur));
@@ -387,15 +197,229 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    align-items: center; /* يحافظ على محاذاة العناصر عمودياً في الوسط */
-    justify-content: space-between; /* يفرق العناصر يمين ويسار */
+    align-items: center; /* محاذاة عمودية وسط */
+    justify-content: space-between; /* فرق بين العناصر يمين ويسار */
+    transition: var(--transition);
+    animation: slideInDown 0.8s ease-out;
+}
+
+.dark-mode header {
+    background-color: rgba(30, 41, 59, 0.85);
+}
+
+/* الشعار مع الحركة */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* زيادة المسافة بين الأيقونة والنص */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    width: 60px;  /* تكبير الأيقونة */
+    height: 60px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-size: 32px !important; /* تكبير الخط */
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+/* الروابط الصغيرة حول الشعار */
+.link-shape {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.link-1 { top: 0; left: 0; background: linear-gradient(135deg, #4f46e5, #6366f1); animation: float1 3s ease-in-out infinite; }
+.link-2 { top: 0; right: 0; background: linear-gradient(135deg, #06b6d4, #22d3ee); animation: float2 3s ease-in-out infinite; }
+.link-3 { bottom: 0; left: 0; background: linear-gradient(135deg, #8b5cf6, #a78bfa); animation: float3 3s ease-in-out infinite; }
+.link-4 { bottom: 0; right: 0; background: linear-gradient(135deg, #4f46e5, #22d3ee); animation: float4 3s ease-in-out infinite; }
+
+.connector {
+    position: absolute;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    opacity: 0.5;
+}
+
+.conn-vertical { width: 2px; height: 16px; top: 17px; left: 50%; transform: translateX(-50%); }
+.conn-horizontal { width: 16px; height: 2px; top: 50%; left: 17px; transform: translateY(-50%); }
+
+/* أزرار التحكم */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px; /* زيادة المسافة بين الأزرار */
+}
+
+/* زر تبديل الوضع */
+.theme-toggle {
+    width: 50px;  /* تكبير الزر */
+    height: 28px;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid var(--gray);
+    transition: var(--transition);
+    animation: slideInRight 0.8s ease-out;
+    flex-shrink: 0;
+}
+
+.theme-toggle::after {
+    content: '';
+    position: absolute;
+    width: 20px;  /* تكبير المؤشر */
+    height: 20px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
     transition: var(--transition);
 }
 
+.dark-mode .theme-toggle::after {
+    transform: translateX(22px);
+}
 
-        .dark-mode header {
-            background-color: rgba(30, 41, 59, 0.85);
-        }
+.theme-toggle i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px; /* تكبير الأيقونة */
+    color: var(--gray);
+}
+
+.theme-toggle .fa-sun { left: 5px; }
+.theme-toggle .fa-moon { right: 5px; }
+
+/* زر الترجمة */
+.language-switch {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 8px 14px; /* تكبير المسافة الداخلية */
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    animation: slideInRight 0.8s ease-out 0.2s backwards;
+    font-size: 16px; /* تكبير الخط */
+    flex-shrink: 0;
+}
+
+.language-switch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.language-switch i {
+    font-size: 14px; /* تكبير الأيقونة */
+}
+
+/* القائمة العلوية */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px; /* زيادة المسافة بين العناصر */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideInDown 0.5s ease-out forwards;
+}
+
+nav li:nth-child(1) { animation-delay: 0.1s; }
+nav li:nth-child(2) { animation-delay: 0.2s; }
+nav li:nth-child(3) { animation-delay: 0.3s; }
+nav li:nth-child(4) { animation-delay: 0.4s; }
+nav li:nth-child(5) { animation-delay: 0.5s; }
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px; /* تكبير الخط */
+    transition: var(--transition);
+    position: relative;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+body.arabic nav a::after {
+    left: auto;
+    right: 0;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* زر القائمة للهواتف */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px; /* تكبير أيقونة الموبايل */
+    color: var(--dark);
+    cursor: pointer;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+/* أنيمشنات الحركة */
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-100%); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float1 { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(-2px,-2px) rotate(5deg); } }
+@keyframes float2 { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(2px,-2px) rotate(-5deg); } }
+@keyframes float3 { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(-2px,2px) rotate(-5deg); } }
+@keyframes float4 { 0%,100% { transform: translate(0,0) rotate(0); } 50% { transform: translate(2px,2px) rotate(5deg); } }
+
 
         @keyframes slideInDown {
             from {
